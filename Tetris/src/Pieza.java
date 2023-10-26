@@ -178,6 +178,8 @@ public class Pieza {
         return this.getCoordenadasPieza();
     }
 
+    
+
 
     public String[] getPiezaNombres() {
         return PiezaNombres;
@@ -219,6 +221,10 @@ public class Pieza {
 
     public void setCoordenadasPieza(ArrayList<Coordenadas> coordenadasPieza) {
         CoordenadasPieza = coordenadasPieza;
+    }
+
+    public Pieza(){
+        
     }
     
 

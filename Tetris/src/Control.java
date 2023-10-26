@@ -1,5 +1,6 @@
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.util.Random;
 
 public class Control implements KeyListener{
     
@@ -10,13 +11,16 @@ public class Control implements KeyListener{
     int pFinaly;
     //Constructor
     public Control(){
-        actual = CrearPieza();
-        this.MoverPiezaInicio();
+        actual = new Pieza();
+        CrearPieza();
+        
     }
 
-    public Pieza CrearPieza(){
-        Pieza p = new Pieza(2);
-        return p;
+    public void CrearPieza(){
+        Random random = new Random();
+        int npieza = random.nextInt(actual.PiezaNombres.length);
+        actual = new Pieza(npieza);
+        this.MoverPiezaInicio();
     }
 
     public void MoverPiezaInicio(){
